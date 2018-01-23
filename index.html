@@ -10,14 +10,17 @@
     <link rel="stylesheet" href="assets/styles/common.css">
 </head>
 
-<body ng-app>
+<body ng-app="trainingApp">
     <nav class="navbar fixed-top navbar-light bg-faded">
         <a class="navbar-brand" href="#">Cric Master</a>
     </nav>
     <main class="pt-3">
         <div class="container-fluid">
-            <h6>Development in progress</h6>
-            {{1+2}}
+            <h4 class="text-muted">Forms and Controller</h4>
+            <div ng-controller="playerController">
+                <!-- <div data-ng-include="'/app/partials/ordersTable.html'" /> -->
+                <ng-include src="'src/views/player.html'"></ng-include>
+            </div>         
         </div>
     </main>
     <nav class="navbar fixed-bottom navbar-light bg-faded">
@@ -25,7 +28,11 @@
     </nav>
     <!--libs : Start -->
     <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-messages.min.js"></script>
     <!--libs : end -->
+
+    <!-- app scripts -->
+    <script src="app.js"></script>
 </body>
 
 </html>

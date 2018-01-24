@@ -1,0 +1,39 @@
+<form name="playerDetailForm" ng-submit="submitForm(playerDetailForm.$valid,player)" novalidate>     
+    <!-- name -->
+    <div class="form-group" ng-class="{ 'has-danger' : playerDetailForm.name.$invalid && !playerDetailForm.name.$pristine }">
+        <label>Name</label>
+        <input type="text" name="name" class="form-control" ng-model="player.name" required>        
+        <p ng-show="playerDetailForm.name.$invalid && !playerDetailForm.name.$pristine" 
+                class="help-block" ng-show="playerDetailForm.name.$touched">You name is required.
+        </p>        
+    </div>
+    <!-- display name -->
+    <div class="form-group" ng-class="{ 'has-danger' : playerDetailForm.username.$invalid && !playerDetailForm.username.$pristine }">
+        <label>Nick Name</label>
+        <input type="text" name="nickname" class="form-control" ng-model="player.nickname" 
+        ng-minlength="3" ng-maxlength="15">
+        <!-- <p ng-show="playerDetailForm.nickname.$error.minlength" class="help-block">Nick Name is too short.</p>
+        <p ng-show="playerDetailForm.nickname.$error.maxlength" class="help-block">Nick Name is too long.</p> -->
+
+        <div ng-messages="playerDetailForm.nickname.$invalid && !playerDetailForm.nickname.$pristine
+                          && playerDetailForm.nickname.$error">
+            <p ng-message="minlength">Your name is too short.</p>
+            <p ng-message="maxlength">Your name is too long.</p>
+            <p ng-message="required">Your name is required.</p>
+        </div>
+    </div>
+    <!-- email -->
+    <div class="form-group" ng-class="{ 'has-danger' : playerDetailForm.email.$invalid && !playerDetailForm.email.$pristine }"></div>
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" ng-model="player.email">
+        <p ng-show="playerDetailForm.email.$invalid && !playerDetailForm.email.$pristine" class="help-block">Enter a valid email.</p>
+    </div>
+
+    <div class="form-group">
+        <label>Team</label>
+        <input type="select" name="team" class="form-control" ng-model="player.team">
+    </div>
+    <!-- SUBMIT BUTTON -->
+    <!-- ng-disabled="playerDetailForm.$invalid" -->
+    <button type="submit" class="btn btn-primary" >Add</button>
+</form>

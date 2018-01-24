@@ -1,0 +1,4 @@
+Angular 1.6 component router introduced
+
+URL hash-bang (#!/) prefix instead of simple hash (#/) in Angular 1.6
+changed in routing referenc href #/route to #!/route

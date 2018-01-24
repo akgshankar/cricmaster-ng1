@@ -7,3 +7,4 @@ trainingApp.service('playersService',playersService);
 trainingApp.service('teamsService',teamsService); 
 trainingApp.directive('selectOnClick',selectOnClick);
 trainingApp.directive('tournament',tournamentDirective);
+trainingApp.directive('addTournament',addTournamentDirective);

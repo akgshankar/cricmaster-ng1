@@ -1,5 +1,5 @@
 <div>Player Details</div>
-<form name="playerForm" ng-submit="submitForm(playerForm.$valid)" novalidate>     
+<form name="playerForm" ng-submit="submitForm(playerForm.$valid,player)" novalidate>     
     <!-- name -->
     <div class="form-group" ng-class="{ 'has-danger' : playerForm.name.$invalid && !playerForm.name.$pristine }">
         <label>Name</label>
@@ -36,5 +36,5 @@
     </div>
     <!-- SUBMIT BUTTON -->
     <!-- ng-disabled="playerForm.$invalid" -->
-    <button type="submit" class="btn btn-primary" >Submit</button>
+    <button type="submit" class="btn btn-primary" >Add</button>
 </form>

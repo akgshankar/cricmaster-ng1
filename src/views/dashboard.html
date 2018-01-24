@@ -1,0 +1,15 @@
+<blockquote class="blockquote">
+        <p class="mb-0">This app is for cricket lovers, you will be able to create and mange your team.
+</blockquote>  
+<div class="d-flex justify-content-between">
+        <div ng-controller="playersController">
+            <ng-include src="'src/views/players.html'"></ng-include>
+        </div>
+        <div>
+
+        </div>
+        <div ng-controller="playerDetailController">
+            <h5>Quick Add</h5>
+            <ng-include src="'src/views/player-detail.html'"></ng-include>
+        </div>
+</div>

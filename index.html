@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>AngularJS Demos</title>
     <script src="assets/js/jquery.min.js"></script>
@@ -8,31 +9,64 @@
     <script src="assets/js/fontawesome-v5.0.2.all.js"></script>
     <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/common.css">
+    <base href="/">
 </head>
 
 <body ng-app="trainingApp">
     <nav class="navbar fixed-top navbar-light bg-faded">
-        <a class="navbar-brand" href="#">Cric Master</a>
+        <div class="d-inline-flex justify-content-between ">
+            <a class="navbar-brand" href="#">Cric Master</a>
+            <ul class="nav d-inline-flex justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#!/teams">Teams</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/players">Players</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/tournament">Tournament</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link active" href="#!/">Home</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <main class="pt-3">
         <div class="container-fluid">
-            <h4 class="text-muted">Forms and Controller</h4>
-            <div ng-controller="playerController">
-                <!-- <div data-ng-include="'/app/partials/ordersTable.html'" /> -->
-                <ng-include src="'src/views/player.html'"></ng-include>
-            </div>         
+            <h5 class="text-muted">
+                It's Cricket time.
+            </h5>                     
+            <div ng-view></div>
         </div>
     </main>
-    <nav class="navbar fixed-bottom navbar-light bg-faded">
-        <a class="navbar-brand" href="#">Fixed bottom</a>
+    <nav class="navbar fixed-bottom navbar-light bg-faded text-center text-sm">
+        <a href="#"> &copy;2018 Cric Master </a>
     </nav>
     <!--libs : Start -->
     <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
     <script src="assets/js/angular-messages.min.js"></script>
     <!--libs : end -->
 
     <!-- app scripts -->
+
+    <!-- Controllers : start -->
+    <script src="src/controllers/player-detail.controller.js"></script>
+    <script src="src/controllers/players.controller.js"></script>
+    <script src="src/controllers/team-detail.controller.js"></script>
+    <script src="src/controllers/teams.controller.js"></script>
+    <script src="src/controllers/tournament.controller.js"></script>
+    <!-- Controller end -->
+
+    <!-- Services start -->
+    <script src="src/services/players.service.js"></script>
+    <script src="src/services/teams.service.js"></script>
+    <!-- Services end -->
+    <script src="src/directives/select-on-click.directive.js"></script>
+    <script src="src/directives/tournament.directive.js"></script>
     <script src="app.js"></script>
+    <script src="app.config.js"></script>
 </body>
 
 </html>

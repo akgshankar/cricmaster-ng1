@@ -14,3 +14,6 @@ $touched	ng-touched	 the input has been blurred.
 
 $scope.submitted = true;
 'has-danger' : userForm.name.$invalid && !userForm.name.$pristine && submitted }"
+
+https://scotch.io/tutorials/declaring-angularjs-modules-for-minification
+https://www.infragistics.com/community/blogs/b/dhananjay_kumar/posts/different-ways-of-injecting-dependency-in-an-angularjs-application

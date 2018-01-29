@@ -1,0 +1,24 @@
+{
+  "name": "cric-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akgshankar/cricmaster-ng1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akgshankar/cricmaster-ng1/issues"
+  },
+  "homepage": "https://github.com/akgshankar/cricmaster-ng1#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}
